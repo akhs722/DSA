@@ -41,11 +41,7 @@ namespace DSA.Questions
                     {
                         list.Add(nums[i]);
                         finalRes.Add(list);
-                    }
-                        
-
-                   
-                        
+                    }    
                 }
             }
             return finalRes;
