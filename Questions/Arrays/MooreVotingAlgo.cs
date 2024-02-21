@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class MooreVotingAlgo
     {
@@ -13,7 +13,7 @@ namespace DSA.Questions
             int candidate = arr[0];
             int count = 1;
 
-            for(int i = 1; i < arr.Length; i++) 
+            for (int i = 1; i < arr.Length; i++)
             {
                 if (count == 0)
                 {
@@ -23,7 +23,7 @@ namespace DSA.Questions
                 else if (candidate == arr[i]) count++;
 
                 else count--;
-                    
+
 
             }
 

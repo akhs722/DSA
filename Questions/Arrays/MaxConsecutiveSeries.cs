@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class MaxConsecutiveSeries
     {
         public static int MaxConsecutive(int[] arr)
         {
-            Dictionary<int, int> map  = new();
+            Dictionary<int, int> map = new();
 
-            foreach(int ele in arr) 
+            foreach (int ele in arr)
             {
-                if(map.ContainsKey(ele))
+                if (map.ContainsKey(ele))
                 {
                     map[ele] = ++map[ele];
                 }
@@ -23,22 +23,22 @@ namespace DSA.Questions
                     map.Add(ele, 1);
                 }
             }
-            int maxCount = Int32.MinValue;
-            foreach(int ele in arr)
+            int maxCount = int.MinValue;
+            foreach (int ele in arr)
             {
                 int count = 1;
                 if (map.ContainsKey(ele - 1))
                 {
                     count++;
                     int num = ele - 2;
-                    while(map.ContainsKey(num))
+                    while (map.ContainsKey(num))
                     {
                         num--;
                         count++;
                     }
                 }
 
-                maxCount = count > maxCount ? count : maxCount; 
+                maxCount = count > maxCount ? count : maxCount;
             }
 
             return maxCount;

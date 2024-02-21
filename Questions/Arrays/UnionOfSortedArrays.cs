@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class UnionOfSortedArrays
     {
@@ -12,7 +12,7 @@ namespace DSA.Questions
         public static List<int> Union(int[] arr1, int[] arr2)
         {
             SortedSet<int> set = new();
-            foreach (int i in arr1) 
+            foreach (int i in arr1)
             {
                 set.Add(i);
             }

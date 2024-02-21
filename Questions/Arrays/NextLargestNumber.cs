@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class NextLargestNumber
     {
@@ -12,8 +12,8 @@ namespace DSA.Questions
         {
             int breakPoint = -1;
             //Find the break point
-        
-            for(int i = arr.Length - 2; i >= 0; i--)
+
+            for (int i = arr.Length - 2; i >= 0; i--)
             {
                 if (arr[i] < arr[i + 1])
                     breakPoint = i;
@@ -22,7 +22,7 @@ namespace DSA.Questions
                 arr.Reverse();
 
 
-            
+
             else
             {
                 Console.WriteLine($"BreakPoint {breakPoint}");
@@ -37,7 +37,7 @@ namespace DSA.Questions
                         break;
                     }
                 }
-                Console.WriteLine(String.Join(",", arr));
+                Console.WriteLine(string.Join(",", arr));
                 //Now After swapping your series will be again in increasing order till the breakpoint, 
                 //Now swap everything to make it in decreasing order after the break point index
 
@@ -47,7 +47,7 @@ namespace DSA.Questions
 
         public static void Reverse(int[] arr, int start, int end)
         {
-            while(start < end) 
+            while (start < end)
             {
                 int temp = arr[start];
                 arr[start] = arr[end];

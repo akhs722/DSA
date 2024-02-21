@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class KadanesAlgorithm
     {
@@ -15,8 +15,8 @@ namespace DSA.Questions
             int csum = 0;
             maxSumSubArray = "";
             string temp = "";
-            int maxsum = Int32.MinValue;
-            for(int i = 0; i < arr.Length; i++) 
+            int maxsum = int.MinValue;
+            for (int i = 0; i < arr.Length; i++)
             {
                 csum += arr[i];
                 if (arr[i] > csum)
@@ -28,12 +28,12 @@ namespace DSA.Questions
                 {
                     temp += arr[i] + " ";
                 }
-                if(csum > maxsum)
+                if (csum > maxsum)
                 {
                     maxsum = csum;
                     maxSumSubArray = temp;
                 }
-               
+
             }
 
             return maxsum;

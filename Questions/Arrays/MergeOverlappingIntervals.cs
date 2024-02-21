@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class MergeOverlappingIntervals
     {
@@ -20,10 +20,10 @@ namespace DSA.Questions
             Array.Sort(arr, (a, b) => a[0].CompareTo(b[0]));
 
             //Once it is sorted out then 
-           
+
             for (int i = 1; i < arr.Length; i++)
             {
-                
+
                 //This means that the overlapping is going to happen
                 if (arr[i][0] <= ans[ans.Count - 1][1])
                 {

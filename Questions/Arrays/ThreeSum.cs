@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Questions
+namespace DSA.Questions.Arrays
 {
     public class ThreeSum
     {
         public static IList<IList<int>> TwoSumMethod(int[] nums, int sum)
         {
-            IList<IList<int>> res = new List<IList<int>>(); 
+            IList<IList<int>> res = new List<IList<int>>();
             for (int i = 0; i < nums.Length; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -41,7 +41,7 @@ namespace DSA.Questions
                     {
                         list.Add(nums[i]);
                         finalRes.Add(list);
-                    }    
+                    }
                 }
             }
             return finalRes;
